@@ -779,6 +779,7 @@ void utils::set_common_curl_options(CURL * handle, configcontainer * cfg) {
 	}
 
 	curl_easy_setopt(handle, CURLOPT_SSL_VERIFYPEER, 0);
+	curl_easy_setopt(handle, CURLOPT_SSL_VERIFYHOST, 0);
 	curl_easy_setopt(handle, CURLOPT_NOSIGNAL, 1);
 	curl_easy_setopt(handle, CURLOPT_ENCODING, "gzip, deflate");
 	curl_easy_setopt(handle, CURLOPT_TIMEOUT, dl_timeout);
